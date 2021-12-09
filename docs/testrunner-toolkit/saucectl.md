@@ -2,6 +2,10 @@
 id: saucectl
 title: saucectl CLI
 sidebar_label: saucectl CLI
+tags:
+    - saucectl
+    - Getting started
+keywords: ['saucectl','cli']
 ---
 
 The `saucectl` command line interface orchestrates the relationship between your tests in your framework, and the rich parallelization, test history filtering, and analytics of Sauce Labs. This page defines each of the commands and flags available in the CLI to allow you to execute your tests with precision.
