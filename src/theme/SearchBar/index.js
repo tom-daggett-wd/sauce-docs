@@ -108,15 +108,12 @@ function DocSearch({contextualSearch, ...props}) {
 
   const transformItems = useRef((items) => {
     return items.map((item) => {
-      // We transform the absolute URL into a relative URL.
-      // Alternatively, we can use `new URL(item.url)` but it's not
-      // supported in IE.
       const a = document.createElement('a');
       a.href = item.url;
 
       return {
         ...item,
-        url: withBaseUrl(`${a.pathname}${a.hash}`),
+        url: item.url,
       };
     });
   }).current;
