@@ -172,7 +172,7 @@ Your CI/CD process needs automated testing in order to be successful. Sauce Labs
   <div className="box box2 card">
     <div className="container">
         <a href="https://docs.testmo.com/integrations/automation/saucelabs"> <img src={useBaseUrl('img/integrations/testmo.png')} alt="TestMo logo" width="45" />
-        <h3>TestMo</h3></a>
+        <h3>Testmo</h3></a>
     </div>
   </div>
   <div className="box box3 card">
