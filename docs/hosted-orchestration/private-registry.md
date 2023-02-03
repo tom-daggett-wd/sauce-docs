@@ -1,39 +1,58 @@
 ---
-id: architecture
-title: Hosted Orchestration Architecture
-sidebar_label: Architecture
+id: private-registry
+title: Hosted Orchestration Private Registry
+sidebar_label: Private Registry
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Architecture Components
+This document describes how to authenticate with your Docker registry provider to pull images.
 
-From the Sauce Labs side, Hosted Orchestration includes the following components:
+Authenticated pulls allow access to private Docker images. We support all of the major private registries.
 
-  * [saucectl](/dev/cli/saucectl)
-  * REST API
-  * Containerized Test Executor
+## Registry Token
 
-Here is an overview of how these components interact with the user environment:
+The first thing you will need to do is create an authorization token from your registry. Instructions vary depending on your provider.
 
-<img src={useBaseUrl('img/hosted/hosted-arch-components.png')} alt="Hosted Orchestration components interacting with user’s environment" width="800"/>
+It is highly recommended that you create a unique authorization token in your registry that can only access the images necessary for running your tests.
 
-### REST API
+## Authenticated Pulls
 
-The REST API service provides the following functionality:
+For your Hosted Orchestration request, specify a username and access token and Sauce Labs will attempt to access your image. If we are unable to access your image you will receive an error response explaining what happened.
 
-  * Creates a new hosted test orchestration session
-  * Gets the status of an existing hosted session
-  * Stops a hosted session that is being executed
+<Tabs
+     defaultValue="SauceCTL"
+     values={[
+       {label: 'SauceCTL', value: 'SauceCTL'},
+     ]}>
+  <TabItem value="SauceCTL">
 
-### Containerized Test Executor
+  ```yaml
+    apiVersion: v1alpha
+    kind: imagerunner
+    sauce:
+    region: us-west-1
+    suites:
+      - name: run sauce test
+        image: saucelabs/sl-demo-docker-primary:0.0.1
+        imagePullAuth:
+          user: $SAUCE_IMAGE_USER
+          token: $SAUCE_IMAGE_TOKEN
+        entrypoint: "mvn test"
+        files:
+          - src: "runsauce.json"
+            dst: "/workdir/runsauce.json"
+        artifacts:
+          - "/path/inside/container/file.log"
+        env:
+          KEY: value
+  ```
 
-The main advantage of test containerization is that the application, together with all of its configuration files and dependencies, is environment-agnostic. Containerized tests will run exactly the same way on any machine--CI or local--irrespective of the underlying OS and other dependencies.
-
-Sauce Labs provides an environment that, given a container image, would execute containerized tests.
-The containerized test executor environment requires the following:
-
-  * A customer-built container image
-  * A command to execute (both [entrypoint](https://docs.docker.com/engine/reference/builder/#entrypoint) and [command](https://docs.docker.com/engine/reference/builder/#cmd) are supported as well)
-  * A number of other optional parameters
-
-The executor will run the container in the dedicated secure environment. The execution status is available via the REST API.
+  Then run with:
+  ```bash
+    saucectl run
+  ```
+  </TabItem>
+</Tabs>

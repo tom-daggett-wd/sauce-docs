@@ -4,6 +4,10 @@ title: Hosted Orchestration Architecture
 sidebar_label: Architecture
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 ## Architecture Components
 
