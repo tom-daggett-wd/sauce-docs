@@ -474,6 +474,30 @@ Files should be uploaded to the **Artifacts** section.
 - `Upload file to [text]`
 - `Upload file to {xpath: “[address]”}`
 
+## Date Support
+Get today's date in a given format. This information should be added on the **Data** tab.
+
+{today, <format>}
+  * "Enter Date" + data tab should have {today, dd/mm/yy}
+  * "Enter Date" + data tab should have {today, mm/dd/yy}
+  * "Enter Date" + data tab should have {today, yy/mm/dd}
+
+### Relative Date Support
+Support is also provided for the addition of days, months, or years. This information should be added on the **Data** tab. View the information in the **Test Data** column.
+Note: used format is not case-sensitive Here var_month44 store a month which is 2 months more than the current month
+For running a job which should use today's date
+ ● {Today, MM/dd/yyyy}
+ 2 days ago from now
+ ● {Today - 2{dd}, MM/dd/yyyy}undefined>2 days later from now: {Today + 2{dd}, MM/dd/yyyy}
+29
+1 month ago from now
+● {Today - 1{mm}, MM/dd/yyyy}
+1 month later from now
+● {Today + 1{mm}, MM/dd/yyyy}
+1 year ago from now
+● {Today - 1{yy}, MM/dd/yyyy}
+1 year later from now
+● {Today + 1{yy}, MM/dd/yyyy}
 ## Screenshot Actions
 
 - `Take screenshot`
