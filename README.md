@@ -65,11 +65,9 @@ Welcome to the `sauce-docs`, this website contains all technical documentation a
     This command builds the site and serves it on your machine's host (http://localhost:3000) and requires no [Algolia API key](https://docusaurus.io/docs/search#connecting-algolia).
 
 -   Start the website locally (with Algolia API Key):
-
     ```
     npm run start
     ```
-
     This command starts a local development server and open up a browser window (http://localhost:3000). Most changes perform live updates to your server without having to restart.
 
 ### Building the Website
@@ -83,11 +81,9 @@ Welcome to the `sauce-docs`, this website contains all technical documentation a
     This command gathers the static content and places them in a `build` directory; which is compatible with most static content hosting services.
 
 -   Serve the website:
-
     ```
     npm run serve
     ```
-
     This command builds the site and serves it on your machine's host (http://localhost:3000).
 
 ## Local Linters
