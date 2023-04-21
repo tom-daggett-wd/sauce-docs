@@ -8,11 +8,12 @@
   <a href="https://github.com/saucelabs/sauce-docs/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat"></a>
   <a href="https://gitpod.io/#https://github.com/saucelabs/sauce-docs"><img src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod" alt="Gitpod Ready-to-Code"/></a>
   <a href="https://github.com/saucelabs/sauce-docs/actions/workflows/deploy.yml"><img src="https://github.com/saucelabs/sauce-docs/actions/workflows/deploy.yml/badge.svg" alt= "Sauce Labs Pipeline Browser Tests"/></a>
-  <a href="https://github.com/saucelabs/sauce-docs/actions/workflows/post-build-tests.yml"><img src="https://github.com/saucelabs/sauce-docs/actions/workflows/post-build-tests.yml/badge.svg" alt= "Post Build Sauce Labs Tests"/>
+  <a href="https://github.com/saucelabs/sauce-docs/actions/workflows/post-build-tests.yml"><img src="https://github.com/saucelabs/sauce-docs/actions/workflows/post-build-tests.yml/badge.svg" alt= "Post Build Sauce Labs Tests"/></a>
 </p>
 
 <p align="center">
-    <img src="https://app.saucelabs.com/browser-matrix/saucy-docs.svg?auth=495eb49379a16a1e211eb5d27444fa76" alt= "Sauce Labs Browser Matrix"/>
+    <a href="https://app.saucelabs.com/u/SAUCY-DOCS"><img src="https://app.saucelabs.com/buildstatus/SAUCY-DOCS?auth=24d4089b9142495ac7db843660ba4ac9" alt="Sauce Test Status"/></a>
+    <a href="https://app.saucelabs.com/u/SAUCY-DOCS"><img src="https://app.saucelabs.com/browser-matrix/SAUCY-DOCS.svg?auth=24d4089b9142495ac7db843660ba4ac9" alt= "Sauce Labs Browser Matrix"/></a>
 </p>
 
 Welcome to the `sauce-docs`, this website contains all technical documentation about Sauce Labs and its products. This site uses [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
@@ -40,20 +41,15 @@ Welcome to the `sauce-docs`, this website contains all technical documentation a
 
 ## Installation
 
--   Pull down this repo:
-
+1. Pull down this repo:
     ```bash
     git clone https://github.com/saucelabs/sauce-docs.git
     ```
-
--   Change directory to `sauce-docs`:
-
+2. Change directory to `sauce-docs`:
     ```bash
     cd sauce-docs
     ```
-
--   Install the dependencies:
-
+3. Install the dependencies:
     ```
     npm install
     ```
