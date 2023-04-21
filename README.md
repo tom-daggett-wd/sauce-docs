@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-    <a href="https://app.saucelabs.com/u/saucy-docs"><img src="https://app.saucelabs.com/buildstatus/saucy-docs?auth=24d4089b9142495ac7db843660ba4ac9" alt="Sauce Test Status"/></a>
-    <a href="https://app.saucelabs.com/u/saucy-docs"><img src="https://app.saucelabs.com/browser-matrix/saucy-docs?auth=24d4089b9142495ac7db843660ba4ac9" alt= "Sauce Labs Browser Matrix"/></a>
+    <img src="https://app.saucelabs.com/buildstatus/saucy-docs?auth=24d4089b9142495ac7db843660ba4ac9" alt="Sauce Test Status"/></a>
+    <img src="https://app.saucelabs.com/browser-matrix/saucy-docs?auth=24d4089b9142495ac7db843660ba4ac9" alt= "Sauce Labs Browser Matrix"/></a>
 </p>
 
 Welcome to the `sauce-docs`, this website contains all technical documentation about Sauce Labs and its products. This site uses [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
