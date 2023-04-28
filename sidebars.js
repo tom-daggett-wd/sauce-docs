@@ -699,7 +699,6 @@ module.exports = {
                                         'basics/sso/configuring-sso-in-auth0',
                                         'basics/sso/configuring-sso-in-google',
                                         'basics/sso/configuring-sso-in-ms-azure-ad',
-                                        'basics/sso/configuring-sso-in-okta',
                                         'basics/sso/configuring-sso-in-onelogin',
                                     ],
                                 },
